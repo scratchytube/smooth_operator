@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Nav, Sidebar } from '../Components'
+import { Nav, Sidebar, Hero, Info } from '../Components'
 
 const Home = () => {
 
@@ -13,6 +13,8 @@ const Home = () => {
         <div>
             <Nav isOpen={isOpen} handleToggle={handleToggle} />
             <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
+            <Hero />
+            <Info />
         </div>
     )
 }

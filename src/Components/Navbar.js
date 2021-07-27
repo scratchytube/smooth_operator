@@ -39,15 +39,15 @@ const Navbar = ({ handleToggle}) => {
 export default Navbar
 
 const Nav = styled.nav`
-position: sticky;
-top: 0;
 background: #000;
 height: 80px;
-// margin-top: -80px;
+margin-top: -80px;
 display: flex;
 justify-content: center;
 align-items: center;
 font-size: 1rem;
+position: sticky;
+top: 0;
 z-index: 10;
 
 @media screen and (max-width: 960px) {
@@ -86,7 +86,7 @@ display: none;
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size 1.8rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
 }
@@ -94,7 +94,7 @@ display: none;
 
 const NavMenu = styled.ul`
 display: flex;
-align-items: center;
+justify-content: center;
 text-align: center;
 list-style: none;
 margin-right: -22px;

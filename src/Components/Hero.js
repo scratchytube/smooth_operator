@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Video from '../videos/video.mp4'
+import { Link as LinkS } from 'react-scroll'
+import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md'
 
 const Hero = () => {
+
+    const [hover, setHover] = useState(false)
+
+    const onHover = () => {
+        setHover(!hover)
+    }
+
     return (
         <HeroContainer>
             <HeroBg>
@@ -14,7 +23,7 @@ const Hero = () => {
                     Sign up for a new account today and receive $250 in credit towards your next payment
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to='signup'>
+                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' >
                         Get Started { hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>
@@ -34,6 +43,23 @@ padding: 0 30px;
 height: 800px;
 position: relative;
 z-index: 1;
+
+:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg, 
+        rgba(0, 0, 0, 0.2) 0%, 
+        rgba(0,0,0,0.6) 100%
+        ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 
+    100%);
+    z-index: 2;
+}
 `
 
 const HeroBg = styled.div`
@@ -94,3 +120,42 @@ max-width: 600px;
     font-size: 18px;
 }
 `
+
+const HeroBtnWrapper = styled.div`
+margin-top: 32px;
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
+const ArrowForward = styled(MdArrowForward)`
+margin-left: 8px;
+font-size: 20px;
+`
+
+const ArrowRight = styled(MdKeyboardArrowRight)`
+margin-left: 8px;
+font-size: 20px;
+`
+
+const Button = styled(LinkS)`
+border-radius: 50px;
+background: ${({primary}) => (primary ? '#01BF71' : '#010606')};
+white-space: nowrap;
+padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
+color: ${({dark}) => (dark ? '#010606' : '#fff')};
+font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
+outline: none;
+border: none;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.2s ease-in-out;
+
+&:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({primary}) => (primary ? '#fff' : '#01BF71')};
+}
+`
+
