@@ -1,10 +1,10 @@
-
-import { Nav } from './Components'
+import { Home } from './Pages'
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <Home />
+      
     </div>
   );
 }
