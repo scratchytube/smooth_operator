@@ -138,7 +138,7 @@ margin-left: 8px;
 font-size: 20px;
 `
 
-const Button = styled(LinkS)`
+export const Button = styled(LinkS)`
 border-radius: 50px;
 background: ${({primary}) => (primary ? '#01BF71' : '#010606')};
 white-space: nowrap;

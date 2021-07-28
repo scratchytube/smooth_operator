@@ -1,26 +1,50 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from 'react-scroll'
+import { Button } from './Hero'
+// import logo from '../images/svg-1.svg'
 
-const Info = () => {
+const Info = ({
+    lightBg, id, 
+    imgStart, 
+    topLine, 
+    lightText, 
+    headline, 
+    darkText, 
+    description,
+    buttonLabel, 
+    primary,
+    dark,
+    img, 
+    alt,
+    // dark2
+}) => {
     return (
         <>
-            <InfoContainer>
+            <InfoContainer lightBg={lightBg} id={id}>
                 <InfoWrapper>
-                    <InfoRow>
+                    <InfoRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
-                                <TopLine>TopLine</TopLine>
-                                <Heading>Heading</Heading>
-                                <SubTitle>Subtitle</SubTitle>
+                                <TopLine>{topLine}</TopLine>
+                                <Heading lightText={lightText}>{headline}</Heading>
+                                <SubTitle darkText={darkText}>{description}</SubTitle>
                                 <BtnWrap>
-                                    <Button to='home' />
+                                    <Button to='home'
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact='true'
+                                    offset={-80}
+                                    primary={primary ? 1 : 0}
+                                    dark={dark ? 1 : 0}
+                                    // dark2={dark2 ? 1 : 0}
+                                    >{buttonLabel}</Button>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img />
+                                <Img src={img} alt={alt}/>
                             </ImgWrap>
                         </Column2>
                     </InfoRow>
@@ -97,7 +121,7 @@ margin-bottom: 24px;
 font-size: 48px;
 line-height: 1.1;
 font-weight: 600;
-color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')}
+color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
 
 @media screen and (max-width: 480px) {
     font-size: 32px;

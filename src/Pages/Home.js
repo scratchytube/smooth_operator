@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Nav, Sidebar, Hero, Info } from '../Components'
+import { Nav, Sidebar, Hero, Info, } from '../Components'
+import { homeObjOne, homeObjTwo, homeObjThree } from '../Components/Data'
+
 
 const Home = () => {
 
@@ -14,7 +16,9 @@ const Home = () => {
             <Nav handleToggle={handleToggle} />
             <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
             <Hero />
-            <Info />
+            <Info {...homeObjOne} />
+            <Info {...homeObjTwo} />
+            <Info {...homeObjThree} />
         </div>
     )
 }
