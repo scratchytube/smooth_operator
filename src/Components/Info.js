@@ -5,7 +5,7 @@ import { Button } from 'react-scroll'
 const Info = () => {
     return (
         <>
-            <InfoContainer id={id}>
+            <InfoContainer>
                 <InfoWrapper>
                     <InfoRow>
                         <Column1>
@@ -14,10 +14,15 @@ const Info = () => {
                                 <Heading>Heading</Heading>
                                 <SubTitle>Subtitle</SubTitle>
                                 <BtnWrap>
-                                    <Button to='home'>Button</Button>
+                                    <Button to='home' />
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
+                        <Column2>
+                            <ImgWrap>
+                                <Img />
+                            </ImgWrap>
+                        </Column2>
                     </InfoRow>
                 </InfoWrapper>
             </InfoContainer>
@@ -71,3 +76,54 @@ padding: 0 15px;
 grid-area: col2;
 `
 
+const TextWrapper = styled.div`
+max-width: 540px;
+padding-top: 0;
+padding-bottom: 60px;
+`
+
+const TopLine = styled.p`
+color: #01bf71;
+font-size: 16px;
+line-height: 16px;
+font-weight: 700;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+margin-bottom: 16px;
+`
+
+const Heading = styled.h1`
+margin-bottom: 24px;
+font-size: 48px;
+line-height: 1.1;
+font-weight: 600;
+color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')}
+
+@media screen and (max-width: 480px) {
+    font-size: 32px;
+}
+`
+
+const SubTitle = styled.p`
+max-width: 440px;
+margin-bottom: 35px;
+font-size: 18px;
+line-height: 24px;
+color: ${({darkText}) => (darkText ? '#010606' : '#fff')}
+`
+
+const BtnWrap = styled.div`
+display: flex;
+justify-content: flex-start;
+`
+
+const ImgWrap = styled.div`
+max-width: 555px;
+height: 100%;
+`
+
+const Img = styled.img`
+width: 100%;
+margin: 0 0 10px 0;
+padding-right: 0;
+`
