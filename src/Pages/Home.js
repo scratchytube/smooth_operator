@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Nav, Sidebar, Hero, Info, } from '../Components'
+import { Nav, Sidebar, Hero, Info, Services } from '../Components'
 import { homeObjOne, homeObjTwo, homeObjThree } from '../Components/Data'
 
 
@@ -18,6 +18,7 @@ const Home = () => {
             <Hero />
             <Info {...homeObjOne} />
             <Info {...homeObjTwo} />
+            <Services />
             <Info {...homeObjThree} />
         </div>
     )
