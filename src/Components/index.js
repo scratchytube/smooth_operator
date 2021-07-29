@@ -3,6 +3,7 @@ import Sidebar from './Sidebar'
 import Hero from './Hero'
 import Info from './Info'
 import Services from './Services'
+import Footer from './Footer'
 
 export {
     Nav,
@@ -10,4 +11,5 @@ export {
     Hero,
     Info,
     Services,
+    Footer,
 }
