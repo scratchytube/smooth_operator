@@ -1,30 +1,62 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
 
 const Navbar = ({ handleToggle}) => {
+
+    const [scrollNav, setScrollNav] = useState(false)
+
+    const changeNav = () => {
+        if (window.scrollY >= 80) {
+            setScrollNav(true)
+        } else {
+            setScrollNav(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    }, [])
+
+    const toggleHome = () => {
+        scroll.scrollToTop()
+    }
+
     return (
         <>
-            <Nav>
+            <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to='/'>dolla</NavLogo>
+                    <NavLogo to='/' onClick={toggleHome} >dolla</NavLogo>
                     <Hamburger onClick={handleToggle}>
                         <FaBars />
                     </Hamburger>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to='about'>About</NavLinks>
+                            <NavLinks to='about'
+                            smooth={true} duration={500} spy={true} 
+                            exact='true' offset={-80}
+                            >About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='discover'>Discover</NavLinks>
+                            <NavLinks to='discover'
+                            smooth={true} duration={500} spy={true} 
+                            exact='true' offset={-80}
+                            >Discover</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='services'>Services</NavLinks>
+                            <NavLinks to='services'
+                            smooth={true} duration={500} spy={true} 
+                            exact='true' offset={-80}
+                            >Services</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='signup'>Sign Up</NavLinks>
+                            <NavLinks to='signup'
+                            smooth={true} duration={500} spy={true} 
+                            exact='true' offset={-80}
+                            >Sign Up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
@@ -39,7 +71,7 @@ const Navbar = ({ handleToggle}) => {
 export default Navbar
 
 const Nav = styled.nav`
-background: #000;
+background: ${({scrollNav}) => scrollNav ? '#000' : 'transparent'};
 height: 80px;
 margin-top: -80px;
 display: flex;
@@ -118,8 +150,8 @@ height: 100%;
 cursor: pointer;
 
 &.active {
-    border-bottom: 3px solid #01bf71;
-}
+    border-bottom: 3px solid #01bf71
+  }
 `
 
 const NavBtn = styled.nav`

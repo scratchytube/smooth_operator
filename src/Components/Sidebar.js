@@ -6,7 +6,7 @@ import { Link as LinkS } from 'react-scroll'
 
 const Sidebar = ({ isOpen, handleToggle }) => {
     return (
-        <SidebarContainer isOpen={isOpen} onClick={handleToggle}>
+        <SidebarContainer isOpen={isOpen}>
             <Icon onClick={handleToggle}>
                 <CloseIcon />
             </Icon>

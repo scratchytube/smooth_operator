@@ -6,7 +6,7 @@ import Icon3 from '../images/svg-2.svg'
 
 const Services = () => {
     return (
-        <ServicesContainer>
+        <ServicesContainer id='services'>
             <ServicesH1>Our Services</ServicesH1>
             <ServicesWrapper>
                 <ServicesCard>
