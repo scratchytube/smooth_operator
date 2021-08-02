@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Icon1 from '../images/svg-1.svg'
-import Icon2 from '../images/svg-5.svg'
-import Icon3 from '../images/svg-2.svg'
+import Icon1 from '../images/basic-mixer2.svg'
+import Icon2 from '../images/software-paintbucket.svg'
+import Icon3 from '../images/snow.svg'
 
 const Services = () => {
     return (
@@ -10,19 +10,19 @@ const Services = () => {
             <ServicesH1>Our Services</ServicesH1>
             <ServicesWrapper>
                 <ServicesCard>
-                    <ServicesIcon src={Icon1}/>
-                    <ServicesH2>Reduce expensives</ServicesH2>
-                    <ServicesP>We help reduce your fees and increase your overall revenue</ServicesP>
+                    <ServicesIcon className='tune-up' src={Icon1}/>
+                    <ServicesH2>Full Tune-Ups</ServicesH2>
+                    <ServicesP>As a preventative measure, motorcycle tune-ups should be performed once every season or every 3000 miles. We'll have you in and out in no time.</ServicesP>
                 </ServicesCard>
                 <ServicesCard>
-                    <ServicesIcon src={Icon2}/>
-                    <ServicesH2>Virtual Offices</ServicesH2>
-                    <ServicesP>You can access our platform online anywhere in the world.</ServicesP>
+                    <ServicesIcon className='paintbucket' src={Icon2}/>
+                    <ServicesH2>Powder Coating</ServicesH2>
+                    <ServicesP>Customize your bike and have it stand out in a crowd with our powder coating service. We have a wide range of powder coating color options.</ServicesP>
                 </ServicesCard>
                 <ServicesCard>
-                    <ServicesIcon src={Icon3}/>
-                    <ServicesH2>Premium Benefits</ServicesH2>
-                    <ServicesP>Unlock our special membership card that returns 5% cash back.</ServicesP>
+                    <ServicesIcon className='snowflake' src={Icon3}/>
+                    <ServicesH2>Winter Storage</ServicesH2>
+                    <ServicesP>We know it can be a hassle dealing with your motorcycle during the cold weather. Store it with us and we'll give you a great deal.</ServicesP>
                 </ServicesCard>
             </ServicesWrapper>
         </ServicesContainer>
@@ -86,9 +86,13 @@ transition: all 0.2s ease-in-out;
 `
 
 const ServicesIcon = styled.img`
-height: 160px;
-width: 160px;
+height: 100px;
+width: 100px;
 margin-bottom: 10px;
+
+.paintbucket {
+    color: #e2a600;
+}
 `
 
 const ServicesH1 = styled.h1`
