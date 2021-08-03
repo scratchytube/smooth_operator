@@ -20,7 +20,7 @@ const Hero = () => {
             <HeroContent>
                 <HeroH1>hehe Crypto</HeroH1>
                 <HeroP>
-                hehe Crypto is a project launched on May 1st with a clear vision to deliver value to holders while providing contributions to help solve some of the world's most pressing issues.
+                hehe Coin is an open source peer-to-peer digital currency, favored by funny people worldwide
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' >
@@ -140,7 +140,7 @@ font-size: 20px;
 
 export const Button = styled(LinkS)`
 border-radius: 50px;
-background: ${({primary}) => (primary ? '#01BF71' : '#010606')};
+background: ${({primary}) => (primary ? '#6c63ff' : '#010606')};
 white-space: nowrap;
 padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
 color: ${({dark}) => (dark ? '#010606' : '#fff')};
