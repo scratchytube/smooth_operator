@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-// import Video from '../videos/video.mp4'
-import Video from '../videos/motorcycle.gif'
+import Video from '../videos/video.mp4'
 import { Link as LinkS } from 'react-scroll'
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md'
 
@@ -16,13 +15,13 @@ const Hero = () => {
     return (
         <HeroContainer>
             <HeroBg>
-                <VideoBg src={Video} alt='motorcycle' />
+                <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroH1>Cycle Heaven</HeroH1>
-                {/* <HeroP>
-                    We love motorcycles here.
-                </HeroP> */}
+                <HeroH1>Virtual Banking Made Easy</HeroH1>
+                <HeroP>
+                    Sign up for a new account today and receive $250 in credit towards your next payment
+                </HeroP>
                 <HeroBtnWrapper>
                     <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' >
                         Get Started { hover ? <ArrowForward /> : <ArrowRight />}
@@ -71,10 +70,10 @@ bottom: 0;
 left: 0;
 width: 100%;
 height: 100%;
-overflow: hidden;
+overfolow: hidden;
 `
 
-const VideoBg = styled.img`
+const VideoBg = styled.video`
 width: 100%;
 height: 100%;
 -o-object-fit: cover;
