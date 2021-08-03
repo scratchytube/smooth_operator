@@ -18,9 +18,9 @@ const Hero = () => {
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroH1>Virtual Banking Made Easy</HeroH1>
+                <HeroH1>hehe Crypto</HeroH1>
                 <HeroP>
-                    Sign up for a new account today and receive $250 in credit towards your next payment
+                hehe Crypto is a project launched on May 1st with a clear vision to deliver value to holders while providing contributions to help solve some of the world's most pressing issues.
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' >

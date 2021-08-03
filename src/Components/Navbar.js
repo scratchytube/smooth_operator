@@ -29,7 +29,7 @@ const Navbar = ({ handleToggle}) => {
         <>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to='/' onClick={toggleHome} >dolla</NavLogo>
+                    <NavLogo to='/' onClick={toggleHome} >HEHE</NavLogo>
                     <Hamburger onClick={handleToggle}>
                         <FaBars />
                     </Hamburger>
