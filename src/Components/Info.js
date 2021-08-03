@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from './Hero'
-// import logo from '../images/svg-1.svg'
 
 const Info = ({
     lightBg, id, 
@@ -29,12 +28,12 @@ const Info = ({
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <SubTitle darkText={darkText}>{description}</SubTitle>
                                 <BtnWrap>
-                                    <Button to='home'
+                                    <Button to='signup'
                                     smooth={true}
                                     duration={500}
                                     spy={true}
                                     exact='true'
-                                    offset={-80}
+                                    offset={-50}
                                     primary={primary ? 1 : 0}
                                     dark={dark ? 1 : 0}
                                     // dark2={dark2 ? 1 : 0}

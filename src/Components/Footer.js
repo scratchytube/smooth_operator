@@ -112,7 +112,7 @@ margin-bottom: 0.5rem;
 font-size: 14px;
 
 &:hover {
-    color: #01bf71;
+    color: #6c63ff;
     transition: 0.3s ease-out;
 }
 `

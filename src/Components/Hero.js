@@ -18,12 +18,16 @@ const Hero = () => {
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroH1>hehe Crypto</HeroH1>
+                <HeroH1>$hehe Crypto</HeroH1>
                 <HeroP>
                 hehe Coin is an open source peer-to-peer digital currency, favored by funny people worldwide
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' >
+                    <Button smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact='true'
+                                    offset={-50} to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' >
                         Get Started { hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>
@@ -155,7 +159,7 @@ transition: all 0.2s ease-in-out;
 
 &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({primary}) => (primary ? '#fff' : '#01BF71')};
+    background: ${({primary}) => (primary ? '#fff' : '#6c63ff')};
 }
 `
 

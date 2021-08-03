@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Icon1 from '../images/svg-1.svg'
-import Icon2 from '../images/svg-5.svg'
-import Icon3 from '../images/svg-2.svg'
+import Icon1 from '../images/stonks-2.svg' 
+import Icon2 from '../images/stock-prices.svg'
+import Icon3 from '../images/stonks-3.svg'
 
 const Services = () => {
     return (
@@ -11,18 +11,18 @@ const Services = () => {
             <ServicesWrapper>
                 <ServicesCard>
                     <ServicesIcon src={Icon1}/>
-                    <ServicesH2>Reduce expensives</ServicesH2>
-                    <ServicesP>We help reduce your fees and increase your overall revenue</ServicesP>
+                    <ServicesH2>Total Supply</ServicesH2>
+                    <ServicesP>$hehe Coin launched on May 1st, 2021 with a total supply of 1,000,000,000,000 $hehe Tokens, and currently has a total of 356,730,435,556 that have been burned.</ServicesP>
                 </ServicesCard>
                 <ServicesCard>
                     <ServicesIcon src={Icon2}/>
-                    <ServicesH2>Virtual Offices</ServicesH2>
-                    <ServicesP>You can access our platform online anywhere in the world.</ServicesP>
+                    <ServicesH2>Liquidity Lock</ServicesH2>
+                    <ServicesP>Every trade generates liquidity that is locked inside PancakeSwap.</ServicesP>
                 </ServicesCard>
                 <ServicesCard>
                     <ServicesIcon src={Icon3}/>
-                    <ServicesH2>Premium Benefits</ServicesH2>
-                    <ServicesP>Unlock our special membership card that returns 5% cash back.</ServicesP>
+                    <ServicesH2>Transaction Tax</ServicesH2>
+                    <ServicesP>Every $hehe Coin transaction has an automatic 9% transaction tax, which is then divided 3% back to Locked LP, 3% back to Holders, and 3% deposited for Charity Funds.</ServicesP>
                 </ServicesCard>
             </ServicesWrapper>
         </ServicesContainer>
